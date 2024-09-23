@@ -96,17 +96,18 @@ main.teoria ul li {
     margin-bottom: 10px;
 }
 
-/* Immagine come cover sotto il contenuto */
+/* Contenitore dell'immagine di copertina */
 .cover-image {
     margin-top: 30px;
     text-align: center;
 }
 
-/* Stili dell'immagine di copertina */
+/* Stili dell'immagine di copertina con altezza ridotta */
 .cover-image img {
     width: 100%; /* L'immagine occuperà il 100% della larghezza disponibile */
-    height: auto; /* Mantiene le proporzioni dell'immagine */
+    height: 300px; /* Altezza fissa più ridotta, simile a una cover */
+    object-fit: cover; /* L'immagine si adatta al contenitore senza distorsioni, ritagliandosi */
     border-radius: 10px; /* Opzionale: rende gli angoli arrotondati */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Leggera ombra sotto l'immagine */
-    object-fit: cover; /* Ritaglia l'immagine per riempire il contenitore */
 }
+
