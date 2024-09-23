@@ -4,22 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fafafa;
-    background-image: url('https://via.placeholder.com/1500x1000?text=Theory+Background'); /* Sostituisci con un'immagine pertinente */
-    background-size: cover;
-    background-position: center;
     color: #333;
-}
-
-/* Overlay semi-trasparente sullo sfondo */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.9); /* Leggera trasparenza sopra lo sfondo */
-    z-index: -1;
+    position: relative;
+    min-height: 100vh;
 }
 
 /* Header per la sezione Teoria */
@@ -30,15 +17,18 @@ header.teoria {
     padding: 30px 0;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    overflow: hidden;
 }
 
+/* Titolo principale */
 header.teoria h1 {
     font-size: 2.5em;
     margin: 0;
     letter-spacing: 2px;
 }
 
+/* Link per tornare alla Home */
 header.teoria a {
     color: #ffdd57;
     text-decoration: none;
@@ -52,15 +42,21 @@ header.teoria a:hover {
     color: #ffffff;
 }
 
-/* Icone/immagini di teoria (posizionate in alto a destra) */
+/* Immagini iconiche all'interno dell'header */
 header.teoria::after {
-    content: url('https://via.placeholder.com/50x50?text=F');
+    content: '';
+    background-image: url('https://via.placeholder.com/600x400?text=Graph+Theory'), /* Sostituire con un'immagine a tema teoria */
+                      url('https://via.placeholder.com/600x400?text=Algorithm+Flowchart'); /* Aggiungi un'altra immagine */
+    background-size: 250px, 300px; /* Dimensione delle immagini */
+    background-position: left -50px bottom, right -100px top; /* Posizionamento delle immagini */
+    background-repeat: no-repeat;
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    opacity: 0.8;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.2; /* Trasparenza per non distrarre troppo dal testo */
+    z-index: 1;
 }
 
 /* Main content per la sezione Teoria */
@@ -72,7 +68,7 @@ main.teoria {
     margin: 40px auto;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     position: relative;
-    z-index: 1;
+    z-index: 3;
 }
 
 main.teoria h2 {
@@ -84,12 +80,12 @@ main.teoria h2 {
     padding-bottom: 5px;
 }
 
-/* Sezione del codice o formule */
+/* Sezione di codice o formule */
 main.teoria pre {
     background-color: #f5f5f5;
     padding: 15px;
     border-left: 4px solid #ffdd57;
-    font-family: 'Courier New', Courier, monospace; /* Richiama il concetto di codice */
+    font-family: 'Courier New', Courier, monospace;
     margin-bottom: 20px;
     overflow-x: auto;
 }
@@ -120,4 +116,20 @@ main.teoria ul {
 
 main.teoria ul li {
     margin-bottom: 10px;
+}
+
+/* Immagine decorativa nella sezione principale */
+main.teoria::before {
+    content: '';
+    background-image: url('https://via.placeholder.com/800x600?text=Data+Structures+Image'); /* Sostituisci con immagine di strutture dati */
+    background-size: 300px;
+    background-position: right top;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 300px;
+    height: 300px;
+    opacity: 0.15; /* Opacità per mantenere leggibilità */
+    z-index: -1;
 }
