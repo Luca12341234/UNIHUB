@@ -102,10 +102,11 @@ main.teoria ul li {
     text-align: center;
 }
 
+/* Stili dell'immagine di copertina */
 .cover-image img {
-    width: 100%;
-    max-width: 900px; /* Dimensione massima della cover simile a una di YouTube */
-    height: auto;
+    width: 100%; /* L'immagine occuperà il 100% della larghezza disponibile */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
     border-radius: 10px; /* Opzionale: rende gli angoli arrotondati */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Leggera ombra sotto l'immagine */
+    object-fit: cover; /* Ritaglia l'immagine per riempire il contenitore */
 }
