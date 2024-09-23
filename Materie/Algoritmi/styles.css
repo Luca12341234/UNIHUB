@@ -33,27 +33,3 @@ main.teoria {
     background-color: #eef2f3; /* Colore di sfondo diverso */
     border-left: 4px solid #2c3e50;
 }
-
-/* Stili per la sezione Laboratorio */
-header.laboratorio {
-    background-color: #8e44ad; /* Colore diverso per laboratorio */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-header.laboratorio h1 {
-    margin: 0;
-}
-
-header.laboratorio a {
-    color: #ffcc00; /* Colore del link diverso */
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-main.laboratorio {
-    padding: 20px;
-    background-color: #f7e6ff; /* Sfondo per laboratorio */
-    border-left: 4px solid #8e44ad;
-}
