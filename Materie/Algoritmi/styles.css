@@ -3,27 +3,44 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fafafa; /* Colore chiaro, moderno */
+    background-color: #fafafa;
+    background-image: url('https://via.placeholder.com/1500x1000?text=Theory+Background'); /* Sostituisci con un'immagine pertinente */
+    background-size: cover;
+    background-position: center;
     color: #333;
+}
+
+/* Overlay semi-trasparente sullo sfondo */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9); /* Leggera trasparenza sopra lo sfondo */
+    z-index: -1;
 }
 
 /* Header per la sezione Teoria */
 header.teoria {
-    background-color: #1e3d58; /* Blu scuro professionale */
+    background-color: #1e3d58;
     color: white;
     text-align: center;
-    padding: 30px 0; /* Maggiore padding per un aspetto più aperto */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Ombra più definita */
+    padding: 30px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
 }
 
 header.teoria h1 {
-    font-size: 2.5em; /* Dimensione del titolo più grande */
+    font-size: 2.5em;
     margin: 0;
-    letter-spacing: 2px; /* Aggiunge un po' di spazio tra le lettere */
+    letter-spacing: 2px;
 }
 
 header.teoria a {
-    color: #ffdd57; /* Giallo brillante per contrastare col blu */
+    color: #ffdd57;
     text-decoration: none;
     font-size: 1.1em;
     margin-top: 15px;
@@ -32,44 +49,67 @@ header.teoria a {
 }
 
 header.teoria a:hover {
-    color: #ffffff; /* Colore bianco al passaggio del mouse */
+    color: #ffffff;
+}
+
+/* Icone/immagini di teoria (posizionate in alto a destra) */
+header.teoria::after {
+    content: url('https://via.placeholder.com/50x50?text=F');
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
 }
 
 /* Main content per la sezione Teoria */
 main.teoria {
     padding: 40px;
-    background-color: #fff; /* Colore bianco per il contrasto con il header */
-    border-top: 4px solid #1e3d58; /* Richiama il colore del header */
-    max-width: 900px; /* Limita la larghezza del contenuto */
-    margin: 40px auto; /* Centra il contenuto orizzontalmente */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombra leggera per un effetto di sollevamento */
+    background-color: #fff;
+    border-top: 4px solid #1e3d58;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
 }
 
 main.teoria h2 {
     font-size: 1.8em;
     color: #1e3d58;
     margin-bottom: 10px;
-    border-bottom: 2px solid #ffdd57; /* Sottolinea con il colore giallo */
+    border-bottom: 2px solid #ffdd57;
     display: inline-block;
     padding-bottom: 5px;
+}
+
+/* Sezione del codice o formule */
+main.teoria pre {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-left: 4px solid #ffdd57;
+    font-family: 'Courier New', Courier, monospace; /* Richiama il concetto di codice */
+    margin-bottom: 20px;
+    overflow-x: auto;
 }
 
 main.teoria p, main.teoria ul {
     font-size: 1.1em;
     line-height: 1.6;
-    color: #555; /* Colore del testo un po' più morbido */
+    color: #555;
 }
 
 main.teoria a {
-    color: #1e3d58; /* Colore principale per i link */
+    color: #1e3d58;
     text-decoration: none;
-    border-bottom: 2px solid #ffdd57; /* Sottolinea con il colore giallo */
+    border-bottom: 2px solid #ffdd57;
     transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 main.teoria a:hover {
-    color: #ffdd57; /* Cambia colore del link al passaggio del mouse */
-    border-bottom: 2px solid #1e3d58; /* Cambia la sottolineatura */
+    color: #ffdd57;
+    border-bottom: 2px solid #1e3d58;
 }
 
 /* Lista del materiale */
