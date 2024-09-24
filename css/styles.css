@@ -1,1 +1,113 @@
+/* Stili generali */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Header per la sezione Teoria */
+header.teoria {
+    background-color: #1e3d58;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+header.teoria h1 {
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+header.teoria a {
+    color: #ffdd57;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: 15px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+header.teoria a:hover {
+    color: #ffffff;
+}
+
+/* Main content per la sezione Teoria */
+main.teoria {
+    padding: 40px;
+    background-color: #fff;
+    border-top: 4px solid #1e3d58;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+main.teoria h2 {
+    font-size: 1.8em;
+    color: #1e3d58;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffdd57;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+main.teoria pre {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-left: 4px solid #ffdd57;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+main.teoria p, main.teoria ul {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+main.teoria a {
+    color: #1e3d58;
+    text-decoration: none;
+    border-bottom: 2px solid #ffdd57;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+main.teoria a:hover {
+    color: #ffdd57;
+    border-bottom: 2px solid #1e3d58;
+}
+
+/* Lista del materiale */
+main.teoria ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+main.teoria ul li {
+    margin-bottom: 10px;
+}
+
+/* Contenitore dell'immagine di copertina */
+.cover-image {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Stili dell'immagine di copertina con altezza ridotta */
+.cover-image img {
+    width: 100%; /* L'immagine occuperà il 100% della larghezza disponibile */
+    height: 300px; /* Altezza fissa più ridotta, simile a una cover */
+    object-fit: cover; /* L'immagine si adatta al contenitore senza distorsioni, ritagliandosi */
+    border-radius: 10px; /* Opzionale: rende gli angoli arrotondati */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Leggera ombra sotto l'immagine */
+}
 
