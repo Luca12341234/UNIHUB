@@ -1,55 +1,144 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materie Universitarie</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materie Universitarie</title>
+  <style>
+    /* Reset base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* Body */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    /* Header con gradienti e shadow */
+    header {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    header h3 {
+      font-size: 1em;
+      margin-top: 10px;
+    }
+    header h3 a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 8px;
+      transition: color 0.3s ease;
+    }
+    header h3 a:hover {
+      color: #d1d1f0;
+    }
+    /* Card container in grid responsive */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    /* Card */
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    /* Link interno alla card */
+    .card-link {
+      display: block;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+    }
+    .card-link h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #444;
+    }
+    .card-link p {
+      font-size: 1em;
+      color: #666;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      header h3 {
+        font-size: 0.9em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Materie Universitarie</h1>
-		<h3><a href="http://informatica.palozz.com/">FRAPALOZZ</a>|<a href="https://nukleo.site/uni/">NUKLEO</a>
-		|<a href="https://orarilezioni.unicam.it/?cds=L-INF">ORARIO</a>|<a href="https://discord.gg/xWjrfbaw">DISCORD</a></h3>
-    </header>
-    <div class="card-container">
-        <div class="card">
-            <a href="Materie/BasiDiDati/index.html" class="card-link">
-                <h2>BASI DI DATI (T)</h2>
-                <p>12 CFU - ST0266</p>
-            </a>
-        </div>
-        <div class="card">
-            <a href="Materie/Metodologie/index.html" class="card-link">
-                <h2>METODOLOGIE DI PROGRAMMAZIONE (T)</h2>
-                <p>12 CFU - ST1419</p>
-            </a>
-        </div>
-	    <div class="card">
-            <a href="Materie/RicercaOperativa/index.html" class="card-link">
-                <h2>(FONDAMENTI DI ) RICERCA OPERATIVA (T)</h2>
-                <p>6 CFU - ST0302</p>
-            </a>
-        </div>
-        <div class="card">
-            <a href="Materie/Sistemi/index.html" class="card-link">
-                <h2>SISTEMI OPERATIVI INFORMATICI</h2>
-                <p>6 CFU - ST0830</p>
-            </a>
-        </div>
-	       <div class="card">
-            <a href="Materie/BasiDiDatiLab/index.html" class="card-link">
-                <h2>BASI DI DATI (L)</h2>
-                <p>12 CFU - ST0266</p>
-            </a>
-        </div>
-	    <div class="card">
-            <a href="Materie/MetodologieLab/index.html" class="card-link">
-                <h2>METODOLOGIE DI PROGRAMMAZIONE (L)</h2>
-                <p>12 CFU - ST1419</p>
-            </a>
-        </div>
-	 
+  <header>
+    <h1>Materie Universitarie</h1>
+    <h3>
+      <a href="http://informatica.palozz.com/">FRAPALOZZ</a> |
+      <a href="https://nukleo.site/uni/">NUKLEO</a> |
+      <a href="https://orarilezioni.unicam.it/?cds=L-INF">ORARIO</a> |
+      <a href="https://discord.gg/xWjrfbaw">DISCORD</a>
+    </h3>
+  </header>
+  <div class="card-container">
+    <div class="card">
+      <a href="Materie/BasiDiDati/index.html" class="card-link">
+        <h2>BASI DI DATI (T)</h2>
+        <p>12 CFU - ST0266</p>
+      </a>
     </div>
+    <div class="card">
+      <a href="Materie/Metodologie/index.html" class="card-link">
+        <h2>METODOLOGIE DI PROGRAMMAZIONE (T)</h2>
+        <p>12 CFU - ST1419</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="Materie/RicercaOperativa/index.html" class="card-link">
+        <h2>(FONDAMENTALI DI) RICERCA OPERATIVA (T)</h2>
+        <p>6 CFU - ST0302</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="Materie/Sistemi/index.html" class="card-link">
+        <h2>SISTEMI OPERATIVI INFORMATICI</h2>
+        <p>6 CFU - ST0830</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="Materie/BasiDiDatiLab/index.html" class="card-link">
+        <h2>BASI DI DATI (L)</h2>
+        <p>12 CFU - ST0266</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="Materie/MetodologieLab/index.html" class="card-link">
+        <h2>METODOLOGIE DI PROGRAMMAZIONE (L)</h2>
+        <p>12 CFU - ST1419</p>
+      </a>
+    </div>
+  </div>
 </body>
 </html>
