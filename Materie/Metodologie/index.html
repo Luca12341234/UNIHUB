@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nome della Materia - Risorse Utili</title>
+  <!-- Link a Font Awesome per le icone (opzionale) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Reset e impostazioni di base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    /* Header moderno con gradienti */
+    header {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+    /* Contenitore principale */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    /* Sezione dei link in stile card */
+    .links-section {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+    .links-section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #444;
+    }
+    ul.links-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+    }
+    ul.links-list li {
+      background: #f1f1f1;
+      border-radius: 8px;
+      width: 200px;
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    ul.links-list li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    ul.links-list li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      display: block;
+    }
+    ul.links-list li a i {
+      margin-right: 8px;
+      color: #667eea;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      ul.links-list li {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nome della Materia</h1>
+    <p>Risorse e link utili per approfondire l'argomento</p>
+  </header>
+  <div class="container">
+    <section class="links-section">
+      <h2>Link Utili</h2>
+      <ul class="links-list">
+        <li><a href="link1.html"><i class="fa-solid fa-book"></i> Risorsa 1</a></li>
+        <li><a href="link2.html"><i class="fa-solid fa-book-open"></i> Risorsa 2</a></li>
+        <li><a href="link3.html"><i class="fa-solid fa-chalkboard-teacher"></i> Risorsa 3</a></li>
+        <!-- Aggiungi altri link qui -->
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
 
